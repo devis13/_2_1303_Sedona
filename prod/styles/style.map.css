@@ -28,6 +28,109 @@
     margin: 0 auto;
 }
 
+._visually-hidden
+{
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0); 
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    border: 0;
+}
+
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---_HEADER_---\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.header
+{
+    margin-bottom: 18px;
+}
+
+.main-nav
+{
+    padding-right: 72px; 
+    padding-left: 72px;
+}
+
+.main-nav__list
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 13px;
+
+    list-style-type: none;
+}
+
+.main-logo
+{
+    position: absolute;
+    top: 0;
+    left: 460px;
+
+    width: 138px;
+    height: 70px;
+}
+
+.main-nav__item:nth-child(2)
+{
+    margin-right: 147px;
+}
+
+.main-nav__item:nth-child(4)
+{
+    margin-right: 161px; 
+    margin-left: auto;
+}
+
+.main-nav__link
+{
+    font-family: 'ptsansbold';
+    font-size: 14px;
+    line-height: 26px;
+
+    display: block;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #000;
+    outline: none;
+}
+.main-nav__link:hover,
+.main-nav__link:focus
+{
+    color: #81b3d2;
+}
+.main-nav__link:active
+{
+    opacity: .3; 
+    color: #000;
+}
+
+.main-nav__link--active
+{
+    color: #766357;
+}
+
+/*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---_HEADER_---\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.intro
+{
+    height: 507px;
+
+    background-image: url('../../img/intro/intro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

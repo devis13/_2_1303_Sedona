@@ -1,4 +1,5 @@
 let gulp = require('gulp'),
+  fileinclude = require('gulp-file-include'),
   minCSS = require('gulp-clean-css'),
   browserSync = require('browser-sync').create(),
   rename = require('gulp-rename'),
@@ -22,6 +23,10 @@ let fromScss = 'dev/scss/**/*.scss',
 
 gulp.task('html', function() {
   return gulp.src(fromHTML + "index.html")
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(rename('index.map.html'))
     .pipe(gulp.dest('prod/map_html'))
     .pipe(minHTML())
@@ -53,7 +58,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('img', function() {
-  return gulp.src('dev/img/*')
+  return gulp.src('dev/img/*/*')
   .pipe(imagemin())
   .pipe(gulp.dest('prod/img'))
   .pipe(browserSync.stream());
@@ -81,7 +86,8 @@ gulp.task('serve', function() {
   });
       
   gulp.watch(fromScss, gulp.parallel('sass'));
-  gulp.watch(fromHTML, gulp.parallel('html'));
+  gulp.watch(fromHTML+"*/*.html", gulp.parallel('html'));
+  gulp.watch(fromHTML+"*.html", gulp.parallel('html'));
   gulp.watch(fromJS, gulp.parallel('compress'));
 });
   
