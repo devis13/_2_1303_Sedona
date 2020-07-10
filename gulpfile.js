@@ -91,4 +91,4 @@ gulp.task('serve', function() {
   gulp.watch(fromJS, gulp.parallel('compress'));
 });
   
-gulp.task('default', gulp.series('html','sass','img','compress','serve'));
+gulp.task('default', gulp.series('serve'));
