@@ -20,6 +20,8 @@
     font-family: 'ptsans';
     font-size: 14px;
     line-height: 21px;
+
+    text-transform: uppercase;
 }
 
 .container
@@ -41,6 +43,14 @@
     padding: 0;
 
     border: 0;
+}
+
+._flex-revers
+{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
 }
 
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -129,8 +139,143 @@
 .intro
 {
     height: 507px;
+    margin-bottom: 60px;
 
     background-image: url('../../img/intro/intro.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.advantages
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.advantage__wrap
+{
+    width: 400px;
+    margin: 0;
+    padding-top: 45px;
+
+    text-align: center;
+}
+
+.advantage__wrap--interactive
+{
+    color: #fff; 
+    background-color: #81b3d2;
+}
+
+.advatages__tagline,
+.advantages__entry
+{
+    font-family: 'ptsansbold';
+    font-size: 21px;
+    line-height: 26px;
+
+    width: 100%;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+
+    text-align: center;
+}
+
+.advantages__entry
+{
+    font-family: 'ptsans';
+    font-size: 14px;
+
+    margin-bottom: 52px;
+
+    color: #333;
+}
+
+.advantages__list,
+.city-benefits
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.advantage
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.advantage__name,
+.city-benefits__name
+{
+    font-family: 'ptsansbold';
+    font-size: 21px;
+    line-height: 21px; 
+
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.advantage__number
+{
+    display: block;
+
+    margin: 0;
+    margin-bottom: 20px; 
+    padding: 0;
+}
+
+.advantage__description,
+.city-benefits__description
+{
+    margin: 0; 
+    padding: 0;
+}
+
+.city-benefits
+{
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+    text-align: center;
+}
+
+.city-benefits__item
+{
+    width: 400px;
+    padding-top: 165px;
+    padding-bottom: 80px;
+}
+.city-benefits__item:nth-child(1),
+.city-benefits__item:nth-child(2),
+.city-benefits__item:nth-child(3)
+{
+    background-image: url(../../img/advantages/icon-1.svg);
+    background-repeat: no-repeat;
+    background-position-x: 161px;
+    background-position-y: 60px;
+}
+.city-benefits__item:nth-child(2)
+{
+    background-image: url(../../img/advantages/icon-3.svg);
+}
+.city-benefits__item:nth-child(3)
+{
+    background-image: url(../../img/advantages/icon-2.svg);
+    background-position-x: 168px;
 }
