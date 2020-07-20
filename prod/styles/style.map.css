@@ -21,6 +21,9 @@
     font-size: 14px;
     line-height: 21px;
 
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
     text-transform: uppercase;
 }
 
@@ -51,6 +54,16 @@
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
+}
+
+._flex-space-between
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -153,6 +166,8 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+
+    margin-bottom: 55px;
 }
 
 .advantage__wrap
@@ -218,6 +233,12 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
+.advantage:nth-child(3),
+.advantage:nth-child(4),
+.advantage:nth-child(5)
+{
+    background-color: #eee;
+}
 
 .advantage__name,
 .city-benefits__name
@@ -278,4 +299,184 @@
 {
     background-image: url(../../img/advantages/icon-2.svg);
     background-position-x: 168px;
+}
+
+.hotel-search
+{
+    position: relative;
+}
+
+.search-form__main-form
+{
+    background-color: #fff;
+}
+
+.hotel-search__question
+{
+    font-family: 'ptsansbold';
+    font-size: 30px;
+    line-height: 36px;
+
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
+
+    text-align: center;
+}
+
+.hotel-search__description
+{
+    line-height: 24px;
+
+    margin: 0;
+    margin-bottom: 123px;
+    padding: 0;
+
+    text-align: center;
+
+    color: #333;
+}
+
+.hotel-search__map
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    vertical-align: bottom;
+}
+
+.hotel-search__main-search
+{
+    position: absolute;
+    top: 143px;
+    left: 315px;
+}
+
+.search-form
+{
+    width: 568px;
+}
+
+.search-form__btn
+{
+    font-family: 'ptsansbold';
+    font-size: 21px;
+    line-height: 26px;
+
+    display: block;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    color: #fff; 
+    border: none;
+    background-color: #756357;
+}
+
+.search-form__btn--open-form
+{
+    display: block;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: #756357;
+}
+
+.search-form__btn--send-form
+{
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+    text-transform: uppercase; 
+
+    background-color: #81b3d2;
+}
+
+.search-form__main-form
+{
+    padding: 55px;
+}
+
+.search-form__field
+{
+    margin: 0;
+    margin-bottom: 30px; 
+    padding: 0;
+}
+
+.field
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center; 
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.field__name
+{
+    font-family: 'ptsansbold';
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.field__name__abults
+{
+    margin-right: 40px;
+}
+
+.field__name__children
+{
+    margin-right: 25px;
+}
+
+.field__input
+{
+    font-family: 'ptsansbold';
+    font-size: 14px;
+    line-height: 26px;
+
+    height: 38px;
+
+    vertical-align: center; 
+
+    border: 0;
+    background-color: #f1f1f1;
+}
+
+.field__input--datapicker
+{
+    width: 345px;
+}
+
+.field__input--visitor
+{
+    display: inline-block;
+
+    width: 38px;
+    margin: 0; 
+    padding: 0;
+}
+
+.field__btn
+{
+    display: inline-block;
+
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+
+    border: none;
 }

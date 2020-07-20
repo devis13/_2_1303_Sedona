@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css">
     <link rel="stylesheet" href="styles/normolize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -116,16 +118,43 @@
     <p class="hotel-search__question">Заинтересовались?</p>
     <p class="hotel-search__description">Укажите предполагаемые даты поездки, <br>
         и мы покажем вам лучшие предложения гостиниц в седоне</p>
-    <img src="#" alt="Карта" class="hotel-search__map">
+    <img src="img/hotel-search/map.jpg" alt="Карта" class="hotel-search__map">
     <div class="hotel-search__main-search search-form">
-        <h3 class="search-form__title">Поиск гостиницы в седоне</h3>
+        <bottom class="search-form__btn search-form__btn--open-form">Поиск гостиницы в седоне</bottom>
         <form action="#" method="post" class="search-form__main-form">
+            <p class="search-form__field field">
+                <label for="arrival" class="field__name">Дата заезда:</label>
+                <input type="text" id="arrival" class="field__input field__input--datapicker field__input--datapicker-arrival">
+            </p>
 
+            <p class="search-form__field field">
+                <label for="departure" class="field__name">Дата выезда:</label>
+                <input type="text" id="departure" class="field__input field__input--datapicker field__input--datapicker-departure">
+            </p>
+
+            <div class="_flex-space-between">
+                <p class="search-form__field field">
+                    <label for="abults" class="field__name field__name__abults">Взрослые:</label>
+                    <span><button class="field__btn">+</button><input type="text" id="abults" class="field__input field__input--visitor field__input--visitor-abults"><button class="field__btn">-</button></span>
+                </p>
+    
+                <p class="search-form__field field">
+                    <label for="children" class="field__name field__name__children">Дети:</label>
+                    <span><button class="field__btn">+</button><input type="text" id="children" class="field__input field__input--visitor field__input--visitor-children"><button class="field__btn">-</button></span>
+                </p>
+            </div>
+
+            <button class="search-form__btn search-form__btn--send-form">Найти</button>
         </form>
     </div>
 </section>
     </main>
 
+    <!-- .///////////////// ---FOOTER--- /////////////////// -->
+    
 
+    <!-- .///////////////// ---SCRIPT-CONNECT--- /////////////////// -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 </html>
