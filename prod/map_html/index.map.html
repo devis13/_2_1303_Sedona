@@ -124,10 +124,10 @@
         <form action="#" method="post" class="search-form__main-form modal-open">
             <p class="search-form__field field">
                 <label for="arrival" class="field__name">Дата заезда:</label>
-                <input type="text" id="arrival" class="field__input field__input--datapicker field__input--datapicker-arrival">
+                <span class="field--arrival"><input type="text" id="arrival" class="field__input field__input--datapicker field__input--datapicker-arrival"></span>
             </p>
 
-            <p class="search-form__field field">
+            <p class="search-form__field field"> 
                 <label for="departure" class="field__name">Дата выезда:</label>
                 <input type="text" id="departure" class="field__input field__input--datapicker field__input--datapicker-departure">
             </p>
@@ -135,12 +135,12 @@
             <div class="_flex-space-between">
                 <p class="search-form__field field">
                     <label for="abults" class="field__name field__name__abults">Взрослые:</label>
-                    <span style="display: flex;"><button class="field__btn field__btn--boost"></button><input type="text" id="abults" class="field__input field__input--visitor field__input--visitor-abults"><button class="field__btn field__btn--cut-down"></button></span>
+                    <span style="display: flex;"><button class="field__btn field__btn--boost field__btn--boost-abults"></button><input type="text" id="abults" class="field__input field__input--visitor field__input--visitor-abults" value="0"><button class="field__btn field__btn--cutDown field__btn--cutDown-abults"></button></span>
                 </p>
     
                 <p class="search-form__field field">
                     <label for="children" class="field__name field__name__children">Дети:</label>
-                    <span style="display: flex;"><button class="field__btn field__btn--boost"></button><input type="text" id="children" class="field__input field__input--visitor field__input--visitor-children"><button class="field__btn field__btn--cut-down"></button></span>
+                    <span style="display: flex;"><button class="field__btn field__btn--boost field__btn--boost-children"></button><input type="text" id="children" class="field__input field__input--visitor field__input--visitor-children" value="0"><button class="field__btn field__btn--cutDown field__btn--cutDown-children"></button></span>
                 </p>
             </div>
 

@@ -435,6 +435,8 @@
 
 .field
 {
+    position: relative;
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -487,9 +489,50 @@
     background-color: #fff;
 }
 
+.field__name
+{
+    display: inline-block;
+}
+
+.field--arrival
+{
+    display: inline-block;
+}
+
 .field__input--datapicker
 {
     width: 345px;
+}
+
+.field__input--datapicker-arrival,
+.field__input--datapicker-departure
+{
+    padding-right: 39px;
+}
+
+.ui-datepicker-trigger
+{
+    position: absolute;
+    top: 9px;
+    left: 428px;
+
+    width: 21px;
+    height: 22px;
+
+    opacity: .3;
+    border: none;
+    outline: none; 
+    background-image: url('../img/hotel-search/calendar.svg');
+}
+.ui-datepicker-trigger:hover,
+.ui-datepicker-trigger:focus
+{
+    opacity: 1;
+}
+.ui-datepicker-trigger:active
+{
+    opacity: 1; 
+    background-image: url('../img/hotel-search/calendar-click.png');
 }
 
 .field__input--visitor
@@ -497,8 +540,10 @@
     display: inline-block;
 
     width: 38px;
-    margin: 0; 
+    margin: 0;
     padding: 0;
+
+    text-align: center;
 }
 
 .field__btn
@@ -511,17 +556,18 @@
     padding: 0;
 
     border: none;
+    outline: none;
 }
 
 .field__btn--boost,
-.field__btn--cut-down
+.field__btn--cutDown
 {
     position: relative;
 }
 .field__btn--boost::before,
-.field__btn--cut-down::before,
+.field__btn--cutDown::before,
 .field__btn--boost::after,
-.field__btn--cut-down::after
+.field__btn--cutDown::after
 {
     position: absolute;
     top: 50%;
@@ -537,37 +583,37 @@
     background-color: #a9a9a9;
 }
 .field__btn--boost::before,
-.field__btn--cut-down::before
+.field__btn--cutDown::before
 {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
 }
 .field__btn--boost::after,
-.field__btn--cut-down::after
+.field__btn--cutDown::after
 {
     -webkit-transform: translate(-50%, -50%) rotate(90deg);
             transform: translate(-50%, -50%) rotate(90deg);
 }
 .field__btn--boost:hover::before,
-.field__btn--cut-down:hover::before,
+.field__btn--cutDown:hover::before,
 .field__btn--boost:hover::after,
-.field__btn--cut-down:hover::after,
+.field__btn--cutDown:hover::after,
 .field__btn--boost:focus::before,
-.field__btn--cut-down:focus::before,
+.field__btn--cutDown:focus::before,
 .field__btn--boost:focus::after,
-.field__btn--cut-down:focus::after
+.field__btn--cutDown:focus::after
 {
     background-color: #000;
 }
 .field__btn--boost:active::before,
-.field__btn--cut-down:active::before,
+.field__btn--cutDown:active::before,
 .field__btn--boost:active::after,
-.field__btn--cut-down:active::after
+.field__btn--cutDown:active::after
 {
     background-color: #81b3d2;
 }
 
-.field__btn--cut-down::after
+.field__btn--cutDown::after
 {
     display: none;
 }
