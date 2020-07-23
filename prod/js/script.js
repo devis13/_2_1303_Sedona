@@ -1,0 +1,1 @@
+var search_btn=document.querySelector(".search-form__btn--open-form"),search_modal=document.querySelector(".search-form__main-form");search_btn.addEventListener("click",function(e){e.preventDefault(),search_modal.classList.toggle("modal-open")});

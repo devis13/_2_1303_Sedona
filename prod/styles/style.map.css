@@ -421,6 +421,8 @@
 
 .search-form__main-form
 {
+    display: none; 
+
     padding: 55px;
 }
 
@@ -568,6 +570,11 @@
 .field__btn--cut-down::after
 {
     display: none;
+}
+
+.modal-open
+{
+    display: block;
 }
 
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
