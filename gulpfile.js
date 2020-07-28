@@ -32,12 +32,16 @@ gulp.task('html', function() {
     .pipe(minHTML())
     .pipe(rename('index.html'))
     .pipe(gulp.dest('prod/'))
-    // .pipe(gulp.src(fromHTML + "catalog.html"))
-    // .pipe(rename('catalog.map.html'))
-    // .pipe(gulp.dest('prod/map_html'))
-    // .pipe(minHTML())
-    // .pipe(rename('catalog.html'))
-    // .pipe(gulp.dest('prod/'))
+    .pipe(gulp.src(fromHTML + "hotels.html"))
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(rename('hotels.map.html'))
+    .pipe(gulp.dest('prod/map_html'))
+    .pipe(minHTML())
+    .pipe(rename('hotels.html'))
+    .pipe(gulp.dest('prod/'))
     .pipe(browserSync.stream());
 });
 

@@ -76,4 +76,3 @@ down_btn_children.addEventListener('click', function (evt) {
     field_children.value = val_children;
 });
 
-

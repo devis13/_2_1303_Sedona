@@ -33,6 +33,14 @@
     margin: 0 auto;
 }
 
+.disable-link
+{
+    cursor: default; 
+    pointer-events: none;
+
+    color: #766357;
+}
+
 ._visually-hidden
 {
     position: absolute;
@@ -147,7 +155,7 @@
 }
 
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---_MAIN_---\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---_INDEX-MAIN_---\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 .intro
 {
@@ -621,6 +629,71 @@
 .modal-open
 {
     display: block;
+}
+
+/*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---_HOTELS-MAIN_---\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.filter
+{
+    background-image: url('../img/filter/filter_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-form
+{
+    font-family: 'ptsans';
+    font-size: 14px;
+    line-height: 21px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding: 31px 73px;
+
+    color: #fff;
+}
+
+.main-form__infrastructures
+{
+    margin-right: 115px;
+}
+
+.infrastructures__title
+{
+    font-family: 'ptsansbold';
+    font-size: 16px; 
+
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
+}
+
+.infrastructures__elem
+{
+    margin: 0;
+    margin-bottom: 22px; 
+    padding: 0;
+}
+
+.infrastructures__label
+{
+    margin-bottom: 22px;
+}
+
+.infrastructures__checkbox-icon
+{
+    width: 5px;
+    height: 5px;
+
+    background-color: red;
+}
+
+.infrastructures__checkbox + .infrastructures__checkbox-icon
+{
+    background-color: blue;
 }
 
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
