@@ -656,12 +656,21 @@
     color: #fff;
 }
 
-.main-form__infrastructures
+.main-form__wrap:nth-child(1)
 {
     margin-right: 115px;
 }
 
-.infrastructures__title
+.main-form__wrap:nth-child(3)
+{
+    margin-left: auto;
+}
+.main-form__wrap:nth-child(3) .main-form__title
+{
+    margin-bottom: 14px;
+}
+
+.main-form__title
 {
     font-family: 'ptsansbold';
     font-size: 16px; 
@@ -671,29 +680,85 @@
     padding: 0;
 }
 
-.infrastructures__elem
+.main-form__elem
 {
+    position: relative;
+
     margin: 0;
     margin-bottom: 22px; 
     padding: 0;
+    padding-left: 40px;
 }
 
-.infrastructures__label
+.main-form__label
 {
-    margin-bottom: 22px;
+    cursor: pointer;
+    vertical-align: middle;
 }
 
-.infrastructures__checkbox-icon
+.main-form__checkbox + .main-form__label::before
 {
-    width: 5px;
-    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    background-color: red;
+    display: block;
+
+    width: 23px;
+    height: 23px;
+
+    content: '';
+
+    background-image: url('../img/filter/checkbox-off.svg');
+    background-repeat: no-repeat;
 }
 
-.infrastructures__checkbox + .infrastructures__checkbox-icon
+.main-form__checkbox:checked + .main-form__label::before
 {
-    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 27px;
+    height: 23px;
+
+    content: '';
+
+    background-image: url('../img/filter/checkbox-on.svg');
+    background-repeat: no-repeat;
+}
+
+.main-form__input-wrap
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+    width: 318px;
+
+    border: 2px solid #fff;
+    border-radius: 2px;
+}
+
+.main-form__val-box
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center; 
+    -ms-flex-align: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+}
+
+.main-form__value
+{
+    width: 100%;
 }
 
 /*  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

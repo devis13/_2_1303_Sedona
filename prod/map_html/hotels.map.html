@@ -40,54 +40,55 @@
             <h1 class="hotels__title _visually-hidden">Гостиницы</h1>
             <!-- .///////////////// ---FILTER--- /////////////////// -->
             <section class="hotels__filter filter container">
+    <h2 class="filter__title _visually-hidden">Фильтр</h2>
     <form action="#" class="filter__form main-form">
-        <div class="main-form__infrastructures infrastructures">
-            <h2 class="infrastructures__title">Инфраструктура:</h2>
+        <div class="main-form__wrap">
+            <h3 class="main-form__title">Инфраструктура:</h3>
 
-            <p class="infrastructures__elem">
-                <input type="checkbox" name="infrastructures" id="infrastructure_1" class="infrastructures__checkbox __visually-hidden">
-                <div class="infrastructures__checkbox-icon "></div>
-                <label for="infrastructure_1" class="infrastructures__label">Бассейн</label>
+            <p class="main-form__elem ">
+                <input type="checkbox" name="main-form" id="infrastructure_1" class="main-form__checkbox _visually-hidden">
+                <label for="infrastructure_1" class="main-form__label">Бассейн</label>
+            </p>
+
+            <p class="main-form__elem ">
+                <input type="checkbox" name="main-form" id="infrastructure_2" class="main-form__checkbox _visually-hidden">
+                <label for="infrastructure_2" class="main-form__label">Парковка</label>
             </p>
             
-            <p class="infrastructures__elem">
-                <label for="infrastructure_2" class="infrastructures__label"></label>
-                <div class="infrastructures__checkbox-icon "></div>
-                <input type="checkbox" name="infrastructures" id="infrastructure_2" class="infrastructures__checkbox _visually-hidden">Парковка
-            </p>
-            
-            <p class="infrastructures__elem">
-                <label for="infrastructure_3" class="infrastructures__label"></label>
-                <div class="infrastructures__checkbox-icon "></div>
-                <input type="checkbox" name="infrastructures" id="infrastructure_3" class="infrastructures__checkbox _visually-hidden">Wi-Fi
+            <p class="main-form__elem ">
+                <input type="checkbox" name="main-form" id="infrastructure_3" class="main-form__checkbox _visually-hidden">
+                <label for="infrastructure_3" class="main-form__label">Wi-Fi</label>
             </p>
             
         </div>
 
-        <div class="main-form__type-house type-house">
-            <h2 class="type-house__title">Тип жилья:</h2>
-            <label class="type-house__label">
-                <div class="type-house__checkbox-icon"></div>
-                <input type="checkbox" name="type-house" class="type-house__checkbox">Гостиница
-            </label>
-            <label for="" class="type-house__label">
-                <div class="type-house__checkbox-icon"></div>
-                <input type="checkbox" name="type-house" class="type-house__checkbox">Мотель
-            </label>
-            <label for="" class="type-house__label">
-                <div class="type-house__checkbox-icon"></div>
-                <input type="checkbox" name="type-house" class="type-house__checkbox">Апартаменты
-            </label>
-        </div>
+        <div class="main-form__wrap">
+            <h3 class="main-form__title">Инфраструктура:</h3>
 
-        <div class="main-form__price price">
-            <h2 class="price__title">Стоимость в сутки (Р):</h2>
-            <div>
-                <p>От<input type="text" class="price__value"></p>
-                <p>До<input type="text" class="price__value"></p>
+            <p class="main-form__elem ">
+                <input type="checkbox" name="main-form" id="type-house_1" class="main-form__checkbox _visually-hidden">
+                <label for="type-house_1" class="main-form__label">Гостиница</label>
+            </p>
+
+            <p class="main-form__elem ">
+                <input type="checkbox" name="main-form" id="type-house_2" class="main-form__checkbox _visually-hidden">
+                <label for="type-house_2" class="main-form__label">Мотель</label>
+            </p>
+            
+            <p class="main-form__elem ">
+                <input type="checkbox" name="main-form" id="type-house_3" class="main-form__checkbox _visually-hidden">
+                <label for="type-house_3" class="main-form__label">Апартаменты</label>
+            </p>
+            
+        </div>
+        <div class="main-form__wrap">
+            <h3 class="main-form__title">Стоимость в сутки (Р):</h3>
+            <div class="main-form__input-wrap">
+                <div class="main-form__val-box">От<input type="text" class="main-form__value" value="0"></div>
+                <div class="main-form__val-box">До<input type="text" class="main-form__value" value="3000"></div>
             </div>
-            <input type="range" name="" id="" class="price__range">
-            <button class="price__btn">Показать</button>
+            <input type="range" name="" id="" class="main-form__range">
+            <button class="main-form__btn">Показать</button>
         </div>
     </form>
 </section>
