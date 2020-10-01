@@ -17,7 +17,7 @@ let fromScss = 'dev/scss/**/*.scss',
     toCSS = 'prod/styles/',
     toMinCSS = 'prod/styles/',
     fromHTML = 'dev/',
-    fromJS = 'dev/js/*.js',
+    fromJS = 'dev/js/',
     toMinJS = 'prod/js/',
     toMinHTML = 'prod/';
 
@@ -70,16 +70,18 @@ gulp.task('img', function() {
 
 gulp.task('compress', function () {
   return pipeline(
-        gulp.src('dev/js/script.js'),
-        rename('script.map.js'),
-        gulp.dest(toMinJS),
-        uglify(),
-        rename('script.js'),
-        gulp.dest(toMinJS),
-        gulp.src(fromJS),
-        uglify(),
-        gulp.dest(toMinJS),
-        browserSync.stream()
+          gulp.src(fromJS+'script.js'),
+          rename('script.map.js'),
+          gulp.dest(toMinJS),
+          uglify(),
+          rename('script.js'),
+          gulp.dest(toMinJS),
+          gulp.src(fromJS+'hotels.js'),
+          rename('hotels.map.js'),
+          gulp.dest(toMinJS),
+          uglify(),
+          gulp.dest(toMinJS),
+          browserSync.stream()
   );
 });
 
@@ -92,7 +94,7 @@ gulp.task('serve', function() {
   gulp.watch(fromScss, gulp.parallel('sass'));
   gulp.watch(fromHTML+"*/*.html", gulp.parallel('html'));
   gulp.watch(fromHTML+"*.html", gulp.parallel('html'));
-  gulp.watch(fromJS, gulp.parallel('compress'));
+  gulp.watch(fromJS+"*.js", gulp.parallel('compress'));
 });
   
 gulp.task('default', gulp.series('serve'));
